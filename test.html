@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Compensation Sheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <div class="header">
+            <div class="header-text">
+                <h1>Food Compensation Sheet</h1>
+                <p>A quick reference for agents to decide the correct compensation before creating a ticket.</p>
+            </div>
+            <div class="dark-mode-toggle">
+                <input type="checkbox" id="darkModeSwitch" />
+                <label for="darkModeSwitch">
+                    <span id="sun-icon">☀️</span>
+                    <span id="moon-icon">🌙</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="filters-card">
+            <div class="filters-grid">
+                <div class="filter-group search-group">
+                    <label for="search-input">Search</label>
+                    <input type="text" id="search-input" placeholder="Search issue, description, resolution…">
+                </div>
+                <div class="filter-group">
+                    <label for="category-select">Category</label>
+                    <select id="category-select"></select>
+                </div>
+                <div class="filter-group">
+                    <label for="type-select">Compensation Type</label>
+                    <select id="type-select">
+                        <option value="all">all</option>
+                        <option value="Refund">Refund</option>
+                        <option value="Replacement">Replacement</option>
+                        <option value="Fixed">Fixed</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="compensation-table">
+                <thead>
+                    <tr>
+                        <th>Complaint Type</th>
+                        <th>Description</th>
+                        <th>Needed Action / Information</th>
+                        <th>Recommended Compensation</th>
+                        <th>Notes</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+        
+        <div class="footer-note">
+            <span>↓</span>
+            <p>End of rules. Always validate compensation with the latest policy updates.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
